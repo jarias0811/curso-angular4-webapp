@@ -1,0 +1,22 @@
+<h3>{{title}}</h3>
+<hr/>
+
+<form #formProduct class="col-lg-6" id="form-product" (ngSubmit)="onSubmit()">
+
+  <label>Nombre</label>
+  <input type="text" #name="ngModel" name="name" [(ngModel)]="product.name" class="form-control" required/>
+
+  <label>Descripción</label>
+  <textarea #description="ngModel" name="description" [(ngModel)]="product.description" class="form-control"></textarea>
+
+  <label>Precio</label>
+  <input type="text" #price="ngModel" name="price" [(ngModel)]="product.price" class="form-control" />
+
+  <label>Imagen</label>
+  <input type="file" class="form-control" />
+
+  <br>
+
+  <input type="submit" value="{{title}}" class="btn btn-success"/>
+
+</form>

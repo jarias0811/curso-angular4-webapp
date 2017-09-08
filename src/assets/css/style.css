@@ -71,3 +71,7 @@
     margin-top: 30px;
     border-radius: 5px;
 }
+
+#form-product label{
+  margin-top: 10px;
+}

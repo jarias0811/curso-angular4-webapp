@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <h2>{{title}}</h2>
-        <hr/>
-    </body>
-</html>
+<h2>{{title}}</h2>
+<hr/>
+
+<div *ngIf="!products">
+  Cargando listado de productos...
+</div>
+<div *ngIf="products">
+  <ul>
+    <li *ngFor="let product of products">
+      <strong>{{product.name}}</strong>
+      <p>$ {{product.price}}</p>
+    </li>
+  </ul>
+</div>
